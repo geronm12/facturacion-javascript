@@ -14,21 +14,23 @@ if (productos) {
     htmlString += CreateCards(
       producto.foto_url,
       producto.nombre,
-      Url(producto.id)
+      Url(producto.id),
+      producto.precio_unitario_str
     );
-    console.log(htmlString);
   });
   div_productos.innerHTML = htmlString;
 } else {
   div_productos.innerHTML = "<h1>NO HAY PRODUCTOS CARGADOS </h1>";
 }
 
-function CreateCards(image, title, url) {
+function CreateCards(image, title, url, price) {
   return `<div class="card" style="width: 18rem;">
     <img src="${image}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${title}</h5>
-      <a href="${url}" class="btn btn-dark">Detalle</a>
+      <span><b>$${price}</b><span>
+      <hr>
+      <a href="${url}" class="btn btn-orange white">Detalle</a>
     </div>
   </div>`;
 }

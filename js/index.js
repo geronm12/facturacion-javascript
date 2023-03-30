@@ -5,6 +5,7 @@ const productos_base = [
     descripción: `Pantalla de gran impacto.
       Con un diseño de 14.1 pulgadas con la notebook Enova puedes disfrutar de los contenidos con resolución de 1366x768, sin perderte ningún detalle y visualizarlo con colores más vivos y definidos.`,
     precio_unitario: 85000,
+    precio_unitario_str: "85.000",
     nombre:
       "NOTEBOOK INTEL CELERON N3350 CON 4GB DE RAM NB142A-W10H DE 14,1 PULGADAS",
     fecha_de_creacion: Date.now(),
@@ -17,6 +18,7 @@ const productos_base = [
     id: 2,
     descripción: `Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.`,
     precio_unitario: 339000,
+    precio_unitario_str: "339.000",
     nombre: "Sony PlayStation 5 825GB Digital Edition color blanco y negro",
     fecha_de_creacion: Date.now(),
     stock: 2,
@@ -27,7 +29,8 @@ const productos_base = [
   {
     id: 3,
     descripción: `Personaliza tu iluminación, crea macros y ajusta el modo de juego con el software HyperX NGENUITY. Este programa potente pero fácil de usar te permite configurar la iluminación por tecla, tener efectos de iluminación deslumbrantes y agregar decenas de otros toques personalizados a tus productos compatibles con NGENUITY.`,
-    precio_unitario: 21.699,
+    precio_unitario: 21699,
+    precio_unitario_str: "21.699",
     nombre: "Teclado Mecánico Hyperx Alloy Origins Core - Aqua",
     fecha_de_creacion: Date.now(),
     stock: 2,
