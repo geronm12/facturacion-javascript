@@ -30,7 +30,7 @@ function CreateCards(image, title, url, price) {
       <h5 class="card-title">${title}</h5>
       <span><b>$${price}</b><span>
       <hr>
-      <a href="${url}" class="btn btn-orange white">Detalle</a>
+      <a href="${url}" class="btn btn-orange white detalle">Detalle</a>
     </div>
   </div>`;
 }

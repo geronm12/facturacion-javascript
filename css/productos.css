@@ -57,7 +57,7 @@ h5 {
   font-weight: bold;
 }
 
-a:hover {
+.detalle:hover {
   background-color: #f24244 !important;
   filter: opacity(0.5) !important;
 }

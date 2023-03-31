@@ -3,3 +3,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.login {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+}

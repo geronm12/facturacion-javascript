@@ -28,14 +28,13 @@ function CreateProduct() {
       <img src="${elementoFiltrado.foto_url}"/>
     </div>
     <div class="col">
-     
     </div>
     <div class="col detalle">
        <h5>${elementoFiltrado.nombre}</h5>
        <div class="precio-like">
        <span class="precio">$${elementoFiltrado.precio_unitario_str}</span>
        <span>
-       <svg id="like" stroke="#f24244" fill="white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
+       <svg id="like" class="like" stroke="#f24244" fill="white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
        </span>
        </div>
        <hr>
@@ -57,6 +56,7 @@ like?.addEventListener("click", () => {
     like.style.stroke = "#f24244";
     like.style.transition = "ease 1s fill";
     likeClicked = true;
+    //la lógica que almacena el like del usuario
   } else {
     like.style.fill = "white";
     like.style.transition = "ease 1s fill";
