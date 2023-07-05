@@ -20,15 +20,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../css/productos.css" />
+    <link rel="stylesheet" type="text/css" href="../css/iniciar_sesión.css" />
+    <link rel="stylesheet" type="text/css" href="../css/administrar.css" />
     <title>Rolling Code 33i</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">FacturacionJs</a>
+        <a class="navbar-brand" href="./index.html">FacturacionJs</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,18 +43,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="../pages/productos.html">Productos</a>
+            </li>
+            <li class="nav-item" id="administrar">
               <a class="nav-link active" href="../pages/productos.html"
-                >Productos</a
+                >Administrar</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item login">
               <button
-                class="btn btn-dark login"
+                class="btn btn-dark"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 id="login-page"
@@ -67,9 +68,58 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
-      <div id="lista" class="d-flex flex-row">Productos</div>
+    <div class="container">
+      <div class="formulario">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="foto" class="form-label">Url Foto</label>
+            <input type="text" class="form-control" id="foto" />
+          </div>
+          <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="stock" />
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio Unitario</label>
+            <input type="number" class="form-control" id="precio" />
+          </div>
+          <div class="mb-3">
+            <label for="descripcion">Descripción del producto</label>
+            <textarea
+              class="form-control"
+              placeholder="Descripción"
+              id="descripcion"
+            >
+            </textarea>
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="stocknegativo"
+            />
+            <label class="form-check-label" for="descripcion"
+              >Permite Stock Negativo
+            </label>
+          </div>
+          <button id="save" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
     </div>
+    <!--Tabla-->
+    <div class="tabla-parent">
+      <div id="tabla"></div>
+    </div>
+    <!---->
 
     <!-- Modal-->
     <div
@@ -134,5 +184,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../js/iniciar_sesion.js"></script>
-  <script src="../js/productos.js"></script>
+  <script src="../js/administrar.js"></script>
 </html>
